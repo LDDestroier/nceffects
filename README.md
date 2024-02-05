@@ -31,3 +31,14 @@ This one is intended to be the main way of rotating windows once I can get it to
 `WINDOW *nce_scale_box( WINDOW *win, int width, int height );`
 
 Returns a new curses window stretched to a given width and height. Wrapper of nce_scale_corners().
+
+
+### How to use the demo
+Linux only.
+Make sure you have the curses library installed on your machine. Then run `make` and then `./demo`.
+
+Press 1,2,3,4 to select each point on the window, then use ARROW KEYS to move each point.
+
+Use Q and W to rotate the window. This transformation is applied before the 4-point scale.
+
+Use BACKSPACE to quit.
