@@ -17,18 +17,24 @@ transpose_x and transpose_y are set to values representing how much the window m
 Any other functions that use transpose_x and transpose_y will do the same thing.
 
 
-`WINDOW *nce_rotate( WINDOW *win,  int angle_deg, int *transpose_x, int *transpose_y );`
+```
+WINDOW *nce_rotate( WINDOW *win,  int angle_deg, int *transpose_x, int *transpose_y );
+```
 
 Returns a new curses window that is rotated by angle_deg degrees (not radians).
 
 
-`WINDOW *nce_rotate_via_scale( WINDOW *win, int angle_deg, int *transpose_x, int *transpose_y );`
+```
+WINDOW *nce_rotate_via_scale( WINDOW *win, int angle_deg, int *transpose_x, int *transpose_y );
+```
 
 Returns a new curses window that is rotated by angle_deg degrees. Wrapper of nce_scale_corners(), so it will look different from nce_rotate().
 This one is intended to be the main way of rotating windows once I can get it to look good enough.
 
 
-`WINDOW *nce_scale_box( WINDOW *win, int width, int height );`
+```
+WINDOW *nce_scale_box( WINDOW *win, int width, int height );
+```
 
 Returns a new curses window stretched to a given width and height. Wrapper of nce_scale_corners().
 
